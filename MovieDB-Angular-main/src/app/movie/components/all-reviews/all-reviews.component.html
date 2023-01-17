@@ -1,0 +1,9 @@
+<section class="review">
+  <div *ngFor="let review of allReviews">
+    <h2>{{review.author}}</h2>
+    <app-show-more>
+      <p>{{review.content}}</p>
+      <p>{{review.url}}</p>
+    </app-show-more>
+  </div>
+</section>

@@ -1,0 +1,12 @@
+div.collapsed {
+  height: 80px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.show-more {
+  cursor: pointer;
+  color: blue;
+  font-weight: bold;
+  font-size: 15px;
+}

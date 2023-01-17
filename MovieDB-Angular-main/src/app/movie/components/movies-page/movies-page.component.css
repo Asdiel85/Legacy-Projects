@@ -1,0 +1,31 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.button-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.button {
+  width: 120px;
+  height: 50px;
+  border-bottom-right-radius: 4px;
+  background-color: #032541;
+  color: white;
+  font-size: 16px;
+}
+.disabled {
+  background-color: gray;
+}
+@media screen and (max-width: 550px) {
+  .wrapper, .button-navigation {
+    padding: 0 10px;
+    justify-content: space-evenly;
+  }
+}

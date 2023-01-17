@@ -1,0 +1,13 @@
+.cast {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.actor {
+  display: flex;
+  flex-direction: column-reverse;
+  max-width: 200px;
+  width: 100%;
+  margin: 0 auto;
+}

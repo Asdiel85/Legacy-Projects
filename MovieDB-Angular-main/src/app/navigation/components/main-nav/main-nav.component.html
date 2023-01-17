@@ -1,0 +1,17 @@
+<div *ngIf="isShown">
+    <app-side-nav></app-side-nav>
+</div>
+<nav class="nav-wrapper">
+    <div class="nav-holder">
+        <ul class="left-side">
+            <li *ngIf="isMobileRes" (click)="toggleSideMenu()" class="toggle-side-nav">&#9776;</li>
+            <li routerLink="" *ngIf="!isMobileRes">Movies</li>
+        </ul>
+        <ul class="right-side">
+            <li *ngIf="!isMobileRes" (click)="logOut()"><span *ngIf="isLoggedUser()">Log Out</span></li>
+            <li routerLink="login" *ngIf="!isMobileRes && !isLoggedUser()">Login</li>
+            <li routerLink="auth"><span *ngIf="!isMobileRes">Join TMDb</span><span *ngIf="isMobileRes"><i
+        class="fas fa-user"></i></span></li>
+        </ul>
+    </div>
+</nav>

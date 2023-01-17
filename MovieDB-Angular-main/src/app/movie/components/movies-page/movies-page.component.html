@@ -1,0 +1,8 @@
+<div class="button-navigation">
+  <button [disabled]="page === 1" [ngClass]="{'disabled': page === 1}" class="button" routerLink="/popular" [queryParams]="{currentPage: page -1}">Previous Page</button>
+  <button [disabled]="page === lastPage" [ngClass]="{'disabled': page === lastPage}" class="button" routerLink="/popular" [queryParams]="{currentPage: page + 1}">Next Page</button>
+</div>
+<section class="wrapper">
+  <app-movie *ngFor="let movie of popular " [movie]="movie"></app-movie>
+</section>
+

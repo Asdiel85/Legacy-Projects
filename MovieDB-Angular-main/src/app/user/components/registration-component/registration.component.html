@@ -1,0 +1,55 @@
+<section class="form-holder">
+  <h2 class="form-heading">Register</h2>
+  <form [formGroup]='registrationForm'>
+    <div class="input-holder">
+      <label class="required-input" for="email">Email</label>
+      <div class="input">
+        <input id="email" type="email" formControlName="email" name="email"/>
+      </div>
+      <div class="error-holder">
+        <div class="invalid-input" *ngIf="(formControl.email.touched) &&
+      formControl.email.errors?.email">Invalid Email
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="input-holder">
+        <label class="required-input" for="password">Password</label>
+        <div class="input">
+          <input id="password" type="password" formControlName="password" name="password"/>
+        </div>
+        <div class="error-holder">
+          <div class="invalid-input"
+               *ngIf="(formControl.password.touched) &&
+           (formControl.password.errors?.required)">Password is Required
+          </div>
+        </div>
+        <div class="error-holder">
+          <div class="invalid-input" *ngIf="formControl.password.errors?.minlength">
+            Password must be at least 6 characters
+          </div>
+        </div>
+        <label class="required-input" for="repeatPassword">Repeat Password</label>
+        <div class="input">
+          <input id="repeatPassword" type="password" formControlName="repeatPassword" name="repeatPassword">
+        </div>
+        <div class="error-holder">
+          <div class="invalid-input" *ngIf=" (formControl.password.touched)
+        && (formControl.password.dirty)
+        && (formControl.repeatPassword.touched) && (formControl.repeatPassword.dirty)
+         && registrationForm.errors?.passwordMatch">Please Repeat Password
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="login-button-holder">
+      <input class="login-button"
+             type="submit"
+             [disabled]="registrationForm.invalid"
+             (click)="createUser()"
+             value="Register"/>
+    </div>
+  </form>
+</section>
+
+

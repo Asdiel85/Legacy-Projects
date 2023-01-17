@@ -1,0 +1,13 @@
+<section class="movie-wrapper">
+  <div><a routerLink="/movie/{{movie.id}}">
+    <app-movie-picture class="poster-holder" [posterSize]="2"
+                       [currentMoviePath]="movie.poster_path"></app-movie-picture>
+  </a></div>
+  <div>
+    <div class="title">{{movie.original_title}}</div>
+    <div class="title">{{movie.release_date | date}}</div>
+    <div class="title">{{movie.vote_average * 10}}%</div>
+  </div>
+</section>
+
+

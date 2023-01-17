@@ -1,0 +1,8 @@
+<section>
+  <img *ngIf="currentMoviePath === null" class="reserve-image"
+       src="../../../../assets/male-profile-picture-vector-1862205.jpg" alt="reserve-picture"> <img
+  *ngIf="currentMoviePath !== null"
+  src="{{baseUrl}}{{availablePosterSizes[posterSize]}}{{currentMoviePath}}"
+  alt="movie-poster">
+</section>
+

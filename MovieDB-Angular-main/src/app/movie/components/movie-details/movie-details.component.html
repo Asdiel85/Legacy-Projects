@@ -1,0 +1,54 @@
+<section class="main">
+  <div class="wrapper-details" *ngIf="currentMovie">
+    <app-movie-picture [posterSize]="3" [currentMoviePath]="currentMovie.poster_path"></app-movie-picture>
+    <div class="movie-info">
+      <h2>{{currentMovie.title}}</h2>
+      <p>{{currentMovie.release_date | date:  'dd/LL/yyyy'}}</p>
+      <p>{{currentMovie.genres | genrePipe: ', '}}</p>
+      <p>{{currentMovie.vote_average * 10}}%</p>
+      <p>{{currentMovie.runtime | time }}</p>
+      <p>{{currentMovie.tagline}}</p>
+      <p>{{currentMovie.overview}}</p>
+    </div>
+  </div>
+  <div>
+    <h2>Top Cast Members:</h2>
+    <div class="cast">
+      <div class="actor" *ngFor="let actor of allActors | slice: 0: 10">
+        <div>
+          <p>{{actor.name}}</p>
+          <p>{{actor.character}}</p>
+        </div>
+        <p>
+          <app-movie-picture [posterSize]="0" [currentMoviePath]="actor.profile_path"></app-movie-picture>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <button *ngIf="allActors?.length > 10" class="button" [routerLink]="['credits']">SeeFullCast</button>
+    <h2>Movie Reviews:</h2>
+    <div class="review">
+      <div class="review-container" *ngFor="let review of reviews | slice: 0: 3">
+        <h3>{{review.author}}</h3>
+        <app-show-more>
+          <p>{{review.content}}</p>
+          <p>{{review.url}}</p>
+        </app-show-more>
+      </div>
+    </div>
+    <button *ngIf="reviews?.length > 3" class="button review-button" [routerLink]="['reviews']">See All reviews</button>
+  </div>
+  <h2>Recommended Movies:</h2>
+  <div class="recommended-movies">
+    <div class="recommended-movie" *ngFor="let recommend of recommendations | slice: 0: 5">
+      <p *ngIf="recommend.poster_path">
+        <a routerLink="/movie/{{recommend.id}}">
+          <app-movie-picture [posterSize]="0" [currentMoviePath]="recommend.poster_path"></app-movie-picture>
+        </a>
+      </p>
+      <p>{{recommend.title}}</p>
+      <p>{{recommend.release_date | date:  'dd/LL/yyyy' }}</p>
+    </div>
+  </div>
+</section>

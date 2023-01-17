@@ -1,0 +1,49 @@
+.form-holder {
+  max-width: 500px;
+  width: 100%;
+  margin: 5rem auto;
+  border: #032541 1px solid;
+
+}
+.form-heading {
+  text-align: center;
+}
+.input-holder {
+  margin: 0 auto;
+  width: 90%;
+}
+.input input {
+  width: 100%;
+  padding: 5px;
+  outline: none;
+}
+
+.login-button-holder {
+  width: 40%;
+  margin: 0 auto;
+}
+.login-button {
+  width: 100%;
+  height: 50px;
+  margin-top: 2rem;
+  margin-bottom: 15px;
+  font-size: 25px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.login-button:enabled{
+  background-color: #032541;
+  color: white;
+}
+.ng-dirty.ng-invalid {
+  border-color:  red;
+  border-width: 2px;
+}
+
+.invalid-input {
+  color: red;
+  text-align: center;
+}
+.error-holder {
+  height: 30px;
+}

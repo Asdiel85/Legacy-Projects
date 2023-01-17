@@ -1,0 +1,9 @@
+.reserve-image {
+  width: 120px;
+  height: 138px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

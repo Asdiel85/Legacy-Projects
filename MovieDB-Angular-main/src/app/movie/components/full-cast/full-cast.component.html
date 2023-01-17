@@ -1,0 +1,9 @@
+<section class="cast">
+  <div class="actor" *ngFor="let actor of allActors">
+    <div>
+      <app-movie-picture [posterSize]="0" [currentMoviePath]="actor.profile_path"></app-movie-picture>
+      <p>{{actor.name}}</p>
+      <p>{{actor.character}}</p>
+    </div>
+  </div>
+</section>

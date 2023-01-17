@@ -1,0 +1,10 @@
+<aside class="side-nav-wrapper">
+  <ul class="top-links">
+    <li routerLink="">Movies</li>
+    <li routerLink="login" *ngIf="!isLoggedUser()">Login</li>
+    <li routerLink="auth">Join TMDb</li>
+    <li (click)="logOut()" *ngIf="isLoggedUser()">Log Out</li>
+  </ul>
+
+
+</aside>
