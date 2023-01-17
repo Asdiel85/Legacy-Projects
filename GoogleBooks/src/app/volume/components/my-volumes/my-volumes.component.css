@@ -1,0 +1,21 @@
+.my-volume-wrapper {
+  margin-top: 5rem;
+}
+
+.my-volume-heading {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 2rem;
+  max-width: 980px;
+  width: 100%;
+}
+
+.my-volume-header {
+  font-weight: 900;
+}
+
+.create-volume {
+  height: 50px;
+  width: 150px;
+  font-size: 18px;
+}

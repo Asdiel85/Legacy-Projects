@@ -1,0 +1,156 @@
+.ng-dirty.ng-invalid {
+  border-color: var(--error-color);
+  border-width: 2px;
+}
+
+.form-heading {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 900;
+}
+
+.text-input {
+  border-radius: 6px;
+}
+
+.invalid-input {
+  color: var(--error-color);
+  text-align: center;
+}
+
+.error-holder {
+  height: 30px;
+}
+
+.search-holder {
+  width: 100% !important;
+}
+
+.search-button {
+  margin: 0;
+}
+
+.form-holder {
+  max-width: 800px;
+  width: 100%;
+  margin: 15rem auto 4rem;
+  border: var(--navigation-color) 2px solid;
+  border-radius: 6px;
+  background-color: var(--form-color);
+}
+
+.input-holder {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.input input {
+  width: 100%;
+  padding: 5px;
+  outline: none;
+}
+
+.search {
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+.input {
+  display: flex;
+}
+
+.input-field {
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.volume-count {
+  height: 38px;
+  border-radius: 4px;
+  font-weight: 900;
+  font-size: 18px;
+  background-color: var(--navigation-color);
+  color: var(--font-collor);
+}
+
+.button {
+  margin-bottom: 18px;
+  height: 37px;
+  width: 120px;
+  font-size: 21px;
+  border-radius: 4px;
+}
+
+.button:enabled {
+  background-color: var(--navigation-color);
+  color: white;
+  border-width: 0;
+}
+
+.books-image {
+  position: absolute;
+  top: 3rem;
+  width: 1100px;
+  z-index: 0;
+}
+
+.search-results {
+  margin: 20px auto;
+}
+
+.create {
+  background-image: none;
+  margin: 3rem auto 20px;
+  background-color: var(--form-color);
+}
+
+.action {
+  font-size: 20px;
+  border: none;
+  border-radius: 6px;
+  height: 37px;
+  font-weight: 900;
+  color: white;
+}
+
+.plus-button {
+  background-color: green;
+}
+
+.minus-button {
+  background-color: var(--error-color);
+}
+
+.authors {
+  display: flex;
+  justify-content: space-between;
+}
+
+.authors-input {
+  width: 100%;
+  padding: 5px;
+}
+
+.authors-holder {
+  width: 100%;
+}
+
+.create {
+  width: 100%;
+}
+
+.button-holder {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.edit-button {
+  background-color: var(--form-color);
+}
+
+@media screen and (max-width: 835px) {
+  .form-holder {
+    max-width: 600px;
+    width: 100%;
+  }
+}

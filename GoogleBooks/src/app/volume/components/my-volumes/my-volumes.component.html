@@ -1,0 +1,11 @@
+<div class="my-volume-wrapper">
+  <div class="my-volume-heading">
+    <h2 class="my-volume-header">My Volumes</h2>
+    <button routerLink="create-volume" class="button create-volume">Create Volume</button>
+  </div>
+  <section class="volume-wrapper" *ngIf="myVolumes">
+    <app-volume (delete)="deleteMyVolume($event)" [showDeleteBtn]="showDeleteBtn" *ngFor="let volume of myVolumes"
+                [volume]="volume">
+    </app-volume>
+  </section>
+</div>

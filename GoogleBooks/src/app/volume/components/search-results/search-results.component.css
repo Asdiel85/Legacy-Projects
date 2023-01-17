@@ -1,0 +1,12 @@
+.search-bar form {
+  position: absolute;
+  width: 500px;
+  left: 28rem;
+}
+
+@media screen and (max-width: 510px) {
+  .search-bar {
+    width: 310px;
+    margin: 0 auto;
+  }
+}

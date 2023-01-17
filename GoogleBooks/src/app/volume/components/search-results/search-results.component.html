@@ -1,0 +1,8 @@
+<section class="results-wrapper">
+  <div>
+    <app-search-volumes [isForSearchResults]="true"></app-search-volumes>
+  </div>
+  <div class="volume-wrapper">
+    <app-volume [showDeleteBtn]='showDeleteBtn' *ngFor="let volume of results" [volume]="volume"></app-volume>
+  </div>
+</section>

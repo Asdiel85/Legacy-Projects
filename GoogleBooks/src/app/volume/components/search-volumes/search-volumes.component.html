@@ -1,0 +1,33 @@
+<section [class.search-results]="isForSearchResults" class="form-holder">
+  <form [formGroup]='volumesSearchForm'>
+    <div class="input-holder">
+      <div class="input search">
+        <input class="input-field" id="volumeTitle" type="text" name="volumeTitle" formControlName="volumeTitle"
+               placeholder="Please enter book title">
+        <div>
+          <select formControlName="volumeCount" class="volume-count" name="volumeCount" id="volumeCount">
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="40">40</option>
+          </select>
+        </div>
+      </div>
+      <div class="error-holder">
+        <div class="invalid-input" *ngIf="(formControl.volumeTitle.touched) &&
+        formControl.volumeTitle.errors?.title">Field is required
+        </div>
+        <div class="error-holder">
+        </div>
+      </div>
+      <div class="button-holder search-holder">
+        <input class="button search-button"
+               type="submit"
+               [disabled]="volumesSearchForm.invalid"
+               (click)="searchFormSubmit()"
+               value="Search"/>
+      </div>
+    </div>
+  </form>
+</section>
+
+

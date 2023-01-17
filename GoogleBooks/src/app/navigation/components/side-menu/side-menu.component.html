@@ -1,0 +1,8 @@
+<aside class="side-nav-wrapper">
+  <ul class="top-links">
+    <li routerLink="volumes">Home</li>
+    <li *ngIf="isLoggedUser()" routerLink="favorites">My Volumes</li>
+    <li routerLink="login" *ngIf="!isLoggedUser()">Login</li>
+    <li (click)="logOut()" *ngIf="isLoggedUser()">Logout</li>
+  </ul>
+</aside>

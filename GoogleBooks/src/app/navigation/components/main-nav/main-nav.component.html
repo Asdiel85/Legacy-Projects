@@ -1,0 +1,18 @@
+<div *ngIf="isShown">
+  <app-side-menu (click)="toggleSideMenu()"></app-side-menu>
+</div>
+<nav class="nav-wrapper">
+  <div class="nav-holder">
+    <ul class="nav-links">
+      <li *ngIf="isMobileRes" (click)="toggleSideMenu()" class="toggle-side-nav">&#9776;</li>
+      <li routerLink="volumes" *ngIf="!isMobileRes">Home</li>
+      <li routerLink="favorites" class="favorites" *ngIf="!isMobileRes && isLoggedUser()">My Volumes</li>
+    </ul>
+    <ul class="user-link">
+      <li><span *ngIf="isMobileRes && !isLoggedUser()" routerLink="login"><i class="fas fa-user"></i></span></li>
+      <li class="logout-button" *ngIf="isLoggedUser()" (click)="logOut()">Logout</li>
+      <li routerLink="login" *ngIf="!isMobileRes && !isLoggedUser()">Login
+    </ul>
+  </div>
+</nav>
+

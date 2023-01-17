@@ -1,0 +1,62 @@
+<section class="form-holder create">
+  <h2 class="form-heading">Create Volume</h2>
+  <form [formGroup]='createMyVolumeForm'>
+    <div class="input-holder">
+      <label class="required-input">Id</label>
+      <div class="input">
+        <input class="text-input" id="id" type="text" formControlName="id" name="id"/>
+      </div>
+      <div class="invalid-input" *ngIf="(formControl.id.errors?.asyncValidation)">
+        Book with this Id already exist
+      </div>
+    </div>
+    <div formGroupName="volumeInfo">
+      <div class="input-holder">
+        <label class="required-input" for="title">Title</label>
+        <div class="input">
+          <input class="text-input" id="title" type="text" formControlName="title" name="title"/>
+        </div>
+        <label>Authors</label>
+        <div class="authors" formArrayName="authors">
+          <div class="authors-holder" *ngFor="let author of authors.controls; let i = index;">
+            <div class="authors">
+              <input class="authors-input text-input" type="text" [formControlName]="i">
+              <div *ngIf="authors.length > 1">
+                <button type="submit" class="minus-button action"
+                        title="Delete author" (click)="removeCurrentAuthor(i)">&minus;
+                </button>
+              </div>
+            </div>
+          </div>
+          <div>
+            <button type="submit" class="plus-button action" (click)="addMoreAuthors()">&#x2B;</button>
+          </div>
+        </div>
+        <label class="required-input" for="publisher">Publisher</label>
+        <div class="input">
+          <input class="text-input" id="publisher" type="text" formControlName="publisher" name="publisher">
+        </div>
+        <label class="required-input" for="publishedDate">Published Date</label>
+        <div class="input">
+          <input class="text-input" id="publishedDate" type="date" formControlName="publishedDate" name="publishedDate">
+        </div>
+        <label class="required-input" for="pageCount">Page Count</label>
+        <div class="input">
+          <input class="text-input" id="pageCount" type="number" formControlName="pageCount" name="pageCount">
+        </div>
+        <div formGroupName="imageLinks">
+          <label class="required-input" for="thumbnail">Thumbnail</label>
+          <div class="input">
+            <input class="text-input" id="thumbnail" type="text" formControlName="thumbnail" name="thumbnail">
+          </div>
+        </div>
+      </div>
+      <div class="button-holder">
+        <input class="button create"
+               type="submit"
+               [disabled]="createMyVolumeForm.invalid"
+               (click)="createMyVolume()" value="Create"/>
+      </div>
+    </div>
+  </form>
+</section>

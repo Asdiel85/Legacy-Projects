@@ -1,0 +1,79 @@
+<section *ngIf="currentVolume" class="main">
+  <div class="details">
+    <h2 class="details-header" *ngIf="currentVolume.volumeInfo.title">
+      {{currentVolume.volumeInfo.title}}</h2>
+    <p *ngIf="!currentVolume.volumeInfo.title">Title: N/A</p>
+    <div class="details-cover">
+      <img *ngIf="currentVolume.volumeInfo.imageLinks?.thumbnail"
+           src="{{currentVolume.volumeInfo.imageLinks?.thumbnail}}" alt="volume-cover">
+      <img class="reserve-image" *ngIf="!currentVolume.volumeInfo.imageLinks?.thumbnail"
+           src="../GoogleBooks/src/assets/404.png" alt="reserve-image">
+    </div>
+    <div class="description">
+      <p class="detail date" *ngIf="currentVolume.volumeInfo.authors">
+        <span class="span">Authors:</span>
+        {{currentVolume.volumeInfo.authors}}</p>
+      <p class="detail date" *ngIf="!currentVolume.volumeInfo.authors">
+        <span>Authors:</span> N/A</p>
+      <div>
+        <p class="detail date" *ngIf="currentVolume.volumeInfo.publishedDate">
+          <span class="span">Published Date:</span>
+          {{currentVolume.volumeInfo.publishedDate}}</p>
+        <p class="detail date" *ngIf="!currentVolume.volumeInfo.publishedDate">
+          <span class="span">Published Date:</span> N/A</p>
+      </div>
+      <div class="info">
+
+        <div>
+          <p *ngIf="currentVolume.saleInfo.isEbook">
+            <span class="span">Price: </span>
+            {{currentVolume.saleInfo.listPrice?.amount}}
+            {{currentVolume.saleInfo.listPrice?.currencyCode}}</p>
+          <p *ngIf="!currentVolume.saleInfo.isEbook">
+            {{currentVolume.saleInfo.saleability}}
+          </p>
+        </div>
+        <div>
+          <p *ngIf="currentVolume.volumeInfo.publisher">
+            <span class="span">Publisher:</span>
+            {{currentVolume.volumeInfo.publisher}}</p>
+          <p *ngIf="!currentVolume.volumeInfo.publisher">
+            <span class="span">Publisher:</span> N/A</p>
+        </div>
+        <div>
+          <p *ngIf="currentVolume.volumeInfo.description" class="description">
+            <span class="span">Description:</span>
+            {{currentVolume.volumeInfo.description | stripHtml }}</p>
+          <p *ngIf="!currentVolume.volumeInfo.description"
+          ><span class="span">Description:</span> N/A</p>
+        </div>
+        <div>
+          <p *ngIf="currentVolume.volumeInfo.categories">
+            <span class="span">Category:</span>
+            {{currentVolume.volumeInfo.categories | arraySplit: ','}}</p>
+          <p *ngIf="!currentVolume.volumeInfo.categories">
+            <span class="span">Category:</span> N/A</p>
+        </div>
+        <div>
+          <p *ngIf="currentVolume.volumeInfo.pageCount">
+            <span class="span">Pages:</span>
+            {{currentVolume.volumeInfo.pageCount}}</p>
+          <p *ngIf="!currentVolume.volumeInfo.pageCount">
+            <span class="span">Pages:</span> N/A</p>
+        </div>
+        <div>
+          <p *ngIf="currentVolume.volumeInfo.averageRating">
+            <span class="span">Rating:</span>
+            {{currentVolume.volumeInfo.averageRating}}</p>
+          <p *ngIf="!currentVolume.volumeInfo.averageRating">
+            <span class="span">Rating:</span> N/A</p>
+        </div>
+        <div>
+          <div *ngIf="currentVolume.accessInfo.pdf.isAvailable">
+            <a href="{{currentVolume.accessInfo.pdf.downloadLink}}">Download</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

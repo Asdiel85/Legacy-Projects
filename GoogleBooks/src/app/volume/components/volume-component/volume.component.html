@@ -1,0 +1,21 @@
+<div *ngIf="volume" class="volume">
+  <div class="thumbnail-holder">
+    <a (click)="openVolumeDetails(volume.id)">
+      <img *ngIf="volume.volumeInfo.imageLinks?.thumbnail"
+           src="{{volume.volumeInfo.imageLinks?.thumbnail}}" alt="">
+      <img class="reserve-image" *ngIf="!volume.volumeInfo.imageLinks?.thumbnail"
+           src="../../.././.././assets/404.png" alt="reserve-image">
+    </a>
+    <button *ngIf="showDeleteBtn" class="action plus-button add-volume-button" (click)="addVolume()">+</button>
+  </div>
+  <div>
+    <p class="info-text">{{volume.volumeInfo.title}}</p>
+    <p class="info-text detail">{{volume.volumeInfo.authors}}</p>
+    <p class="info-text detail date">{{volume.volumeInfo.publishedDate | date: 'yyyy/LL/dd'}}</p>
+  </div>
+  <div *ngIf="!showDeleteBtn">
+    <button class="minus-button action delete" (click)="deleteVolume(volume)">&minus;</button>
+    <button class="action edit-button" (click)="editButtonClick(volume.id)">&#9998;</button>
+  </div>
+</div>
+

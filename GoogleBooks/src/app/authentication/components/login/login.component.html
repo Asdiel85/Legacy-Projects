@@ -1,0 +1,34 @@
+<section class="form-holder create login">
+  <h2 class="form-heading">Login</h2>
+  <form [formGroup]='loginForm'>
+    <div class="input-holder">
+      <label class="required-input" for="email">Email</label>
+      <div class="input">
+        <input id="email" type="email" formControlName="email" name="email"/>
+      </div>
+      <div class="error-holder">
+        <div class="invalid-input" *ngIf="(formControl.email.touched) &&
+      formControl.email.errors?.email">Invalid Email
+        </div>
+      </div>
+    </div>
+    <div class="input-holder">
+      <label class="required-input" for="password">Password</label>
+      <div class="input">
+        <input id="password" type="password" formControlName="password" name="password"/>
+      </div>
+      <div class="error-holder">
+        <div class="invalid-input" *ngIf="(formControl.password.touched) &&
+      formControl.password.errors?.required">Password is Required
+        </div>
+      </div>
+    </div>
+    <div class="login-button-holder">
+      <input class="login-button create button"
+             type="submit"
+             [disabled]="loginForm.invalid"
+             (click)="submitLoginForm()"
+             value="Login"/>
+    </div>
+  </form>
+</section>

@@ -1,0 +1,65 @@
+.volume {
+  position: relative;
+  width: 300px;
+  height: 250px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #e8f9fc;
+  margin-bottom: 2rem;
+  border-radius: 6px;
+  word-break: break-word;
+}
+
+.info-text {
+  color: #2b3030;
+  font-size: 14px;
+  margin-top: 15px;
+  margin-right: 5px;
+}
+
+.thumbnail-holder {
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+.thumbnail-holder img {
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.detail {
+  font-style: italic;
+  font-size: 15px;
+}
+
+.date {
+  color: #454c53;
+}
+
+img {
+  object-fit: contain;
+}
+
+.add-volume-button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: 12px;
+  margin-bottom: 12px;
+}
+
+.delete {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-right: 12px;
+  margin-bottom: 12px;
+}
+
+.edit-button {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-left: 12px;
+  margin-bottom: 12px;
+}

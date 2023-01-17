@@ -1,0 +1,21 @@
+.login {
+  margin-top: 10rem;
+  background-color: #e8f9fc;
+}
+
+.login-button {
+  width: 100%;
+}
+
+.login-button-holder {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.login input {
+  border-radius: 6px;
+}
+
+.invalid-input {
+  height: 60px;
+}
