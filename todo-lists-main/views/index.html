@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ToDo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <table>
+            <tr>
+                <td>
+                    <h1 style="font-size:26px;">ToDo List Manager</h1>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <ul style="list-style:none; padding: 20px;">
+                        <li style="float:left; width:70px; text-decoration:none; color:black;"><button id="homeLink" onclick="homeLinkClick()">Home</button></li>
+                        <li style="float:left; width:130px; text-decoration:none; color:black;"><button id="usersLink" onclick="usersLinkClick()">Manage Users</button></li>
+                        <li style="float:left; width:130px; text-decoration:none; color:black;"><button id="lists" onclick="listsClick()">Manage lists</button></li>
+                        <li style="float: left; width: 150px; text-decoration: none; color: black;"><button id="loginLink" onclick="loginLinkClick()">Login</button></li>
+                        <li style="float: left; width: 150px; text-decoration: none; color: black;"><button id="logoutLink" onclick="logoutLinkClick()">Logout</button></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="content"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script src="../scripts/constant.js"></script>
+    <script src="../scripts/repositories/date.js"></script>
+    <script src="../scripts/repositories/baseRepo.js"></script>
+    <script src="../scripts/services.js"></script>
+    <script src="../scripts/repositories/userRepo.js"></script>
+    <script src="../scripts/repositories/taskRepo.js"></script>
+    <script src="../scripts/repositories/listRepo.js"></script>
+    <script src="../scripts/entities/user.js"></script>
+    <script src="../scripts/entities/list.js"></script>
+    <script src="../scripts/entities/task.js"></script>
+    <script src="../scripts/views/homePage.js"></script>
+    <script src="../scripts/views/loginPage.js"></script>
+    <script src="../scripts/views/users/usersPage.js"></script>
+    <script src="../scripts/views/users/usersEditPage.js"></script>
+    <script src="../scripts/views/lists/listsPage.js"></script>
+    <script src="../scripts/views/lists/listsEditPage.js"></script>
+    <script src="../scripts/views/lists/listsDetailsPage.js"></script>
+    <script src="../scripts/views/tasks/taskEditPage.js"></script>
+    <script src="../scripts/views/listsEdit.js"></script>
+    <script src="../scripts/index.js"></script>
+    <script src="../scripts/events.js"></script>
+
+</body>
+
+</html>

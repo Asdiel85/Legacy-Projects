@@ -1,0 +1,70 @@
+.current-project-box {
+    width: 80%;
+    margin-left: 2rem;
+    margin-top: 5rem;
+    box-shadow: 0px 0px 6px #0000004D;
+opacity: 1;
+font-size: 22px;
+
+}
+
+.project-details-holder h3 {
+margin-left: 2rem;
+}
+.tasks-header h3 {
+    margin-left: 2rem;
+}
+
+.tasks-header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    width: 83%;
+}
+.task-action-buttons-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 0px 6px #0000004D;
+    opacity: 1;
+    width: 80%;
+    margin-left: 2rem;
+    font-size: 22px;
+}
+.description {
+    text-align: left;
+    width: 60%;
+    padding: 10px 10px
+}
+
+.status {
+    height: 50px;
+    width: 400px;
+    margin: 0 auto;
+    background-color: white;
+}
+.task-holder span {
+    margin-left: 10px
+}
+
+.collored {
+    border-radius: 12px;
+    padding: 2px;
+    font-size: 14px;
+}
+.pending-status {
+    background-color: #F26060;
+}
+
+.progress {
+    background-color: #FCC100;
+}
+
+.completed {
+    background-color: #5FC27E;
+}

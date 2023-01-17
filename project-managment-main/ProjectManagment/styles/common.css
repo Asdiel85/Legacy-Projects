@@ -1,0 +1,63 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+html, body, main {
+	height: 100%;
+	width: 100%;
+}
+
+h1 {
+  font-size: 70px;
+  color: black;
+}
+
+h2 {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 22px;
+  padding: 20px;
+}
+
+
+body {
+    font-family: "Source Sans Pro", sans-serif;
+        background-color: var(--body-color);
+    }
+
+     .main {
+          display: grid;
+          grid-template-areas: 
+            "side ctn ctn"
+            "side ctn ctn"
+            "side ctn ctn";
+          }
+          .content {
+            grid-area: ctn;
+            
+          }
+          .side-menu {
+            grid-area: side;
+  }
+   li {
+          list-style: none;
+          cursor: pointer;
+ }
+
+.menu-open {
+ background-color: rgba(0,0,0,0.4);
+}
+       

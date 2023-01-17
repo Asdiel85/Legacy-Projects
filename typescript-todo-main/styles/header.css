@@ -1,0 +1,165 @@
+/* HEADER */
+header {
+    top: 0;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    padding: 10px 0;
+    background-color: var(--nav-color);
+}
+
+.menu-btn {
+    display: none;
+}
+
+h1 {
+    color: var(--white);
+    padding: 5px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}
+
+#logoutLink {
+    position: absolute;
+    right: 16px;
+}
+
+li, a {
+    font-family: var(--font);
+    text-decoration: none;
+    color: var(--white);
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+header .container {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 24px;
+}
+
+.logo {
+    color: var(--white);
+}
+
+.logo-text {
+    color: var(--white);
+    font-size: 26px;
+    padding: 10px;
+    font-weight: 900;
+
+
+}
+
+.header-menu li {
+    display: inline-block;
+    margin: 2px 10px;
+    border-bottom: 1px solid var(--nav-color);
+    cursor: pointer;
+}
+
+li:hover {
+    border-bottom-color: 1px solid var(--nav-color);
+}
+
+
+@media only screen and (max-width: 770px) {
+    header .container {
+        flex-wrap: wrap;
+    }
+
+    #logoutLink {
+        position: static;
+        right: 0;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 25px;
+    }
+
+    .nav-container {
+        display: none;
+        flex: 0 0 100%;
+    }
+
+    /* "HAMBURGER" MENU" */
+    header .menu-icon {
+        padding: 28px 20px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    header .menu-icon .nav-icon {
+        display: block;
+        background-color: var(--white);
+        height: 4px;
+        width: 50px;
+        position: relative;
+        transition: background .2s ease-out;
+    }
+
+    header .menu-icon .nav-icon::before {
+        background-color: var(--white);
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        top: 10px;
+    }
+
+    header .menu-icon .nav-icon::after {
+        background-color: var(--white);
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        top: -10px;
+    }
+
+    .menu-btn:checked ~ .nav-container {
+        display: block;
+        position: absolute;
+        top: 100%;
+        background: var(--white);
+        left: 0;
+        right: 0;
+    }
+
+    .nav-container li a {
+        color: var(--font-color);
+    }
+
+    .menu-btn:checked ~ .nav-container li {
+        display: block;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .menu-btn:checked ~ .menu-icon .nav-icon {
+        background-color: transparent;
+    }
+
+    .menu-btn:checked ~ .menu-icon .nav-icon::before {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    .menu-btn:checked ~ .menu-icon .nav-icon::after {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+
+}

@@ -1,0 +1,48 @@
+.container {
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: content-box;
+}
+@media only screen and (min-width: 1300px) {
+    .container {
+        max-width: 1800px;
+    }
+}
+
+@media only screen and (max-width: 1290px) {
+    h2, .list-h2 {
+       font-size: 28px;
+    }
+header .container {
+    margin: 0 auto;
+}
+.list-title {
+    font-size: 28px;
+ }
+
+}
+
+@media only screen and (max-width: 770px) {
+.hide-user {
+    display: none;
+}
+.forms {
+    display: flex;
+    flex-direction: column;
+}
+}
+
+@media only screen and (max-width:420px) {
+.hide-list {
+    display: none;
+}
+table {
+    font-size: 16px;
+}
+#editListButton {
+    width: 80%;
+}
+.user-form-button {
+   width: 100% !important;
+}
+}

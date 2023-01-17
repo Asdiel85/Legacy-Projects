@@ -1,0 +1,68 @@
+.wrapper{
+    display: flex;
+    margin: 0 auto;
+    width: 1170px;
+    justify-content: space-around;
+    align-content: center;   
+}
+
+
+.form-container {
+    width: 40%;
+    margin: auto;
+}
+
+#forms {
+    width: 100%;
+}
+
+.rows {
+    width: 100%;
+    display: block;
+}
+
+.columns {
+    width: 100%;
+    display: inline-block;
+}
+
+.labels {
+    width: 30%;
+    float: left;
+}
+
+.form-input {
+    width: 60%;
+    float: right;
+}
+
+
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+  }
+ 
+
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+ul.li {
+    row-gap: 20px;
+}
+
+
+#newUserLink {
+    display: inline-block;
+}
+
+#newListLink {
+    display: inline-block; 
+    
+}
+
+#newTaskLink {
+    display: inline-block; 
+}

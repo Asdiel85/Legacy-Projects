@@ -1,0 +1,71 @@
+.buttons-container {
+    margin: auto;
+    margin-right: 15px  ;
+}
+
+.action-button {
+    cursor: pointer;
+}
+
+.assign-icon {
+    content: url('/images/ic_person_add_24px.svg');
+}
+
+.edit-icon {
+    content: url('/images/ic_create_24px\ .svg');
+}
+
+.delete-icon {
+    content: url('/images/ic_delete_24px.svg');
+}
+
+.assign-icon:hover, .edit-icon:hover {
+filter: invert(62%) sepia(5%) saturate(3815%) hue-rotate(136deg) brightness(99%) contrast(87%);
+}
+
+.delete-icon:hover {
+    filter: invert(53%) sepia(38%) saturate(3932%) hue-rotate(325deg) brightness(100%) contrast(90%);
+}
+
+.action-button {
+    margin: 0 auto;
+}
+    /*Side Menu Buttons*/
+.projects {
+    content: url('/images/ic_home_24px.svg');
+}
+
+.users {
+    content: url('/images/ic_people_24px.svg');
+}
+
+.teams {
+    content: url('/images/ic_assignment_ind_24px.svg');
+}
+
+.sign-out{
+    content: url('/images/sign-out-icon_2\ \(1\).svg');
+}
+.sign-out {
+    filter: invert(100%) sepia(0%) saturate(6102%) hue-rotate(286deg) brightness(84%) contrast(81%);
+  
+}
+.button {
+border-radius: 33px;
+background-color: var(--buttons-color);
+font-size: 22px;
+    color:white;
+}
+
+
+.login-button {
+    width: 300px !important;
+    height: 65px !important;
+    margin: 0, auto !important;
+}
+
+.create {
+    width: 260px;
+    height: 45px;
+}
+

@@ -1,0 +1,92 @@
+/* SIDE MENU */
+.side-menu {
+  width: 300px;
+    height: 100%; 
+    background-color: #354052; 
+  }
+ .closebtn {
+    position: absolute;
+    color: white;
+    font-size: 50px;
+   margin-left: 240px;
+   top: 5px;
+   text-decoration: none;
+  }
+
+  .showNav {
+    display: none;
+  }
+
+  .closebtn {
+    display: none;
+  }
+
+  .showNav {
+    font-size: 30px;
+    color: black;
+    position: absolute;
+    left: 14rem;
+    text-decoration: none;
+  }
+
+  .logo-img {
+    content: url('/images/ic_polymer_24px.svg');
+  }
+  .navigation {
+    margin-top: 15px;
+    padding: 5px;
+  }
+  .logo {
+    padding: 26px;
+    font-size: 22px;
+    color: white;
+    font-weight: 900;
+  }
+
+  .side-list li {
+    color: white;
+    padding: 10px;
+    margin-left: 15px;
+  }
+  .side-list li a {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+ 
+
+  @media screen and (max-width: 1280px) {
+  .side-menu {
+    width: 260px; 
+  }
+}
+
+@media screen and (max-width:780px) {
+  .side-menu {
+    width:0; 
+    position: absolute;
+  }
+  .navigation {
+    display: none;
+  }
+
+  .showNav {
+    display: block;
+    font-size: 30px;
+    color: black;
+    position: absolute;
+    left: 3px;
+    text-decoration: none;
+    color: var(--side-menu-collor);
+  }
+  .closebtn {
+    display: block;
+    position: absolute;
+    color: white;
+    font-size: 50px;
+   margin-left: 230px;
+   top: 0;
+   text-decoration: none;
+   z-index: 1;
+  }
+
+}

@@ -1,0 +1,50 @@
+/*LIST DETAILS PAGE*/
+#tasksTable {
+    max-width: 660px;
+}
+.list-container {
+    position: relative;
+}
+.tasks-page-buttons {
+    position: absolute;
+    right: 0;
+}
+.list-form {
+    display: flex;
+    padding-bottom: 20px;
+    justify-content: space-between;
+}
+
+.list-date p {
+    padding: 15px;
+}
+
+.list-date h3 {
+    padding: 4px 15px;
+}
+
+.tasks {
+    max-width: 660px;
+    background-color: var(--border-color);
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 2rem;
+}
+.task {
+    color: var(--font-color);
+    max-width: 660px;
+    margin-top: 0;
+    border-bottom: 1px solid var(--border-color);
+}
+.task label {
+    margin: 5px;
+    size: 22px;
+    font-weight: 600;
+    color: black;
+}
+.task p {
+    margin: 5px 3rem;
+}
+
+
+

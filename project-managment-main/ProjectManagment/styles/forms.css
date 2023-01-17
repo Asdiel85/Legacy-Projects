@@ -1,0 +1,52 @@
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 0 auto;
+  background-color: var(--body-collor);
+}
+
+.form input {
+  height: 50px;
+  width: 400px;
+  margin-top: 10px;
+  margin: 20px auto;
+}
+
+.form textarea {
+  width: 400px;
+  height: 207px;
+  margin: 0 auto;
+}
+
+.modal-form {
+  background-color: white;
+  width: 440px;
+  height: 473px;
+  box-shadow: 2px 2px 5px #00000029;
+opacity: 1;
+} 
+
+form h3 {
+  margin-left: 20px;
+}
+
+.small {
+  height: 233px;
+}
+
+/* Create User From */
+
+.user-form input {
+  margin: 9px auto;
+}
+
+.checkbox {
+  height: 20px !important;
+}
+
+/* WORKLOG FORM */
+.log-form {
+  height: 312px;
+}

@@ -1,0 +1,72 @@
+/*General Button */
+
+.button {
+    margin: 4rem auto 0;
+    width: 30%;
+    height: 65px;
+    background-color: var(--nav-color);
+    color: var(--white);
+    border-radius: 4px;
+    border: none;
+    font-size: 22px;
+    font-family: var(--font);
+    cursor: pointer;
+}
+/*SVG Container and SVG Buttons */
+.action-buttons-container {
+    text-align: center;
+}
+
+.action-buttons-container .action-button {
+    padding: 0 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.list-details-button, .user-details-button {
+content: url("/images/ic_assignment_24px.svg");
+}
+.user-edit-button, .list-edit-button,
+.task-edit-button {
+    content: url("/images/ic_create_24px .svg");
+}
+
+.list-delete-button, .user-delete-button,
+.task-delete-button {
+    content: url("/images/ic_delete_24px.svg");
+}
+
+.user-edit-button:hover, .list-edit-button:hover, 
+.task-edit-button:hover {
+    filter: invert(44%) sepia(98%) saturate(548%) hue-rotate(179deg) brightness(93%) contrast(90%)
+} 
+
+.list-details-button:hover {
+    filter: invert(44%) sepia(98%) saturate(548%) hue-rotate(179deg) brightness(93%) contrast(90%)
+}
+
+.list-delete-button:hover, .user-delete-button:hover,
+.task-delete-button:hover {
+    filter: invert(43%) sepia(85%) saturate(1432%) hue-rotate(328deg) brightness(118%) contrast(113%);
+}
+
+.user-edit {
+    margin-bottom: 2rem;
+}
+
+.new-task {
+    content: url("/images/ic_add_24px.svg");
+   margin-right: 5px;
+}
+.new-task:hover {
+    filter: invert(44%) sepia(98%) saturate(548%) hue-rotate(179deg) brightness(93%) contrast(90%)
+}
+.checkbox {
+    margin: 5px 12px;
+}
+
+#editTask {
+    width: 40%;
+    height: 3rem;
+    margin: 0 5rem;
+}

@@ -1,0 +1,43 @@
+@media only screen and (min-width: 1300px) {
+    .table-section {
+        width: 80%;
+    }
+}
+
+.table-section {
+    margin: 5rem auto;
+}
+
+.table-section .table-section-heading {
+    display: flex;
+    justify-content: space-between;
+}
+.table-section table {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: left;
+}
+
+.table-section td {
+    max-width: 250px;
+    padding: 10px 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--white);
+}
+
+.table-section th {
+    background-color: var(--border-color);
+    height: 60px;
+    padding: 10px;
+}
+
+.table-section .button {
+    margin: 0;
+    padding: 0;
+    width: 12rem;
+    height: 3rem;
+}
